@@ -1,0 +1,97 @@
+:root {
+    font-family: "object-regular", sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 3.125vw;
+
+    @include tablet {
+        font-size: 1.497vw;
+    }
+
+    @include laptop {
+        font-size: 0.976vw;
+    } 
+
+    @include desktop {
+        font-size: 0.666vw;
+    } 
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+
+    &.not-scroll {
+        overflow: hidden;
+    }
+}  
+  
+body{
+    font-family: 'Mulish';
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: $main--black;
+    line-height: 125%;
+}
+
+.container {
+    padding: 0 2rem;
+
+    @include tablet {
+        padding: 0 2.4rem;
+    }
+ 
+    @include laptop {
+        padding: 0 5.2rem;
+    } 
+
+    @include desktop {
+        padding: 0 8rem;
+    } 
+}
+
+a {
+    font: inherit;
+    text-decoration: none;
+    color: inherit;
+} 
+
+button,
+a.as-button {
+    display: block; 
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    color: inherit;
+    background: transparent; 
+    text-align: center; 
+}  
+
+.btn{
+    border-radius: 3.2rem;
+    border: 1px solid $main--black;
+    padding: 0.6rem 2.2rem;
+    transition: 0.3s;
+
+    @include desktop{
+        font-size: 1.5rem;
+        padding: 0.8rem 3.2rem;
+    }
+
+    &.white-white{
+        background-color: $main--white;
+        
+        &:hover{
+            background-color: $main--black; 
+            color: $main--white;
+        }
+    }
+}

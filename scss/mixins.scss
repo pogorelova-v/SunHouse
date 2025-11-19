@@ -1,0 +1,25 @@
+@mixin break($point) {
+    @media(min-width: $point) {
+        @content;
+    }
+}
+
+@mixin tablet {
+  @media (min-width: 668px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1500px) {
+    @content;
+  }
+}
+ 
+ 
