@@ -1,0 +1,151 @@
+.des-company{
+    .container{
+
+        .wrap-des{ 
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            @include tablet{
+                flex-direction: row; 
+                gap: 1.6rem;  
+            }
+
+            @include laptop{
+                gap: 2rem;
+            }
+
+            @include desktop{
+                gap: 3.6rem;
+            }
+
+            &>img{ 
+                display: block;
+                height: 26.4rem;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 2rem; 
+
+                &:not(:first-child){ 
+                    display: none;
+                } 
+
+                @include tablet{
+                    height: auto;
+                    width: 18.4rem; 
+                    
+                    &:first-child{ 
+                        display: none;
+                    } 
+                    &:not(:first-child){ 
+                        display: block;
+                    } 
+                }
+
+                @include laptop{
+                    width: 21.5rem;
+
+                    &:first-child{ 
+                        display: block;
+                    } 
+                }
+
+                @include desktop{
+                    width: 31.2rem; 
+                }
+            }
+
+            .content{  
+
+                .text{ 
+                    margin-bottom: 3.2rem;
+
+                    @include tablet{
+                        margin-bottom: 4.4rem;
+                    }
+
+                    @include laptop{
+                        margin-bottom: 4rem;
+                    }
+
+                    @include desktop{
+                        margin-bottom: 9.9rem;
+                    }
+
+
+
+                    &>p{
+                        margin-bottom: 0.8rem; 
+
+                        @include tablet{ 
+                            text-align:justify;
+                            margin-bottom: 1rem; 
+                        }
+
+                        @include desktop{
+                            margin-bottom: 1.6rem;
+                        }
+                    }
+
+                    .btn{
+                        height: 3.2rem;
+                        margin-top: 2rem;
+                        font-weight: 200;
+
+                        @include tablet{
+                            margin-top: 1.8rem;
+                        }
+
+                        @include laptop{
+                            margin-top: 2rem;
+                        }
+
+                        @include desktop{
+                            height: 4.4rem;
+                            margin-top: 2.8rem;
+                        }
+                    } 
+                }
+
+                .supports{
+
+                    p{
+                        font-size: 1.1rem;
+                        font-weight: 200;
+                        opacity: 0.6;
+
+                        @include desktop{
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    .icon{
+                        margin-top: 1rem;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 1.2rem;
+
+                        @include tablet{
+                            gap: 2.1rem;
+                        }
+
+                        img{
+                           height: 1.6rem;
+                            flex-shrink: 0;
+
+                            @include desktop { 
+                                height: 2.5rem;
+                                
+                                &.wide { 
+                                    height: unset; 
+                                    width: var(--desktop-width); 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

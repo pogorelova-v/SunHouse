@@ -40,7 +40,44 @@ body{
     font-size: 1.2rem;
     color: $main--black;
     line-height: 125%;
+
+    @include desktop{
+        font-size: 1.5rem;
+    }
 }
+
+section{
+
+    @include tablet{
+        margin-bottom: 6.4rem;
+    }
+
+    @include laptop{
+        margin-bottom: 9.6rem;
+    }
+
+    &:first-child{
+        &>.container{  
+            padding-top: 0;
+        }
+    }
+    
+    &>.container{
+        padding-top: 3.2rem;
+        padding-bottom: 3.2rem;
+        
+        @include tablet{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    
+    &.gray{
+        background-color: $main--gray;
+    }
+
+}
+
 
 .container {
     padding: 0 2rem;
@@ -93,5 +130,47 @@ a.as-button {
             background-color: $main--black; 
             color: $main--white;
         }
+    }
+
+    &.white-black{
+            width: 100%;
+            height: 4.4rem;
+            background-color: $main--black;
+            color: $main--white;
+        
+        &:hover{
+            background-color: $main--white; 
+            color: $main--black;
+        }
+
+        @include desktop{
+            height: 5.8rem;
+        }
+    }
+}
+
+h1{
+    font-size: 2.1rem;
+    line-height: 145%;
+    font-family: 'Forum';
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+
+    @include tablet{
+        text-align: center;
+        font-size: 2.4rem;
+        margin-bottom: 3.2rem;
+    }
+
+    @include laptop{
+        font-size: 3.2rem;
+        line-height: 135%;
+        margin-bottom: 4.8rem;
+    }
+
+    @include desktop{
+        font-size: 4.8rem;
+        line-height: 140%;
+        margin-bottom: 6.4rem;
     }
 }
