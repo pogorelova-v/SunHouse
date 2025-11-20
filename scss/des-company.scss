@@ -55,7 +55,10 @@
                 }
             }
 
-            .content{  
+            .content{   
+                @include desktop{
+                    width: 29.4rem;
+                }
 
                 .text{ 
                     margin-bottom: 3.2rem;
