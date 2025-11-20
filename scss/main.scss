@@ -34,7 +34,7 @@ html {
     }
 }  
   
-body{
+body{ 
     font-family: 'Mulish';
     font-weight: 200;
     font-size: 1.2rem;
@@ -79,7 +79,7 @@ a.as-button {
     border-radius: 3.2rem;
     border: 1px solid $main--black;
     padding: 0.6rem 2.2rem;
-    transition: 0.3s;
+    transition: 0.3s; 
 
     @include desktop{
         font-size: 1.5rem;

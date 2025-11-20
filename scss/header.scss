@@ -109,25 +109,25 @@ header{
                     display: block; 
                 }
             }
-            
-            &.duplicate {
-                position: fixed;
-                top: -100%;
-                right: 0;
-                left: 0;
-                padding: 1.2rem 0;
-                margin-bottom: 0;
-                box-shadow: 0px 4px 8.4px 0px rgba(0, 0, 0, 0.08);
-                z-index: $header-index;
-                transition: top .3s;
-            
-                &.fixed {
-                    top: 0;
-                }
-            }
 
         }
 
+    }
+
+    &.duplicate {
+        position: fixed;
+        top: -100%;
+        right: 0;
+        left: 0;
+        padding: 1.2rem 0;
+        margin-bottom: 0;
+        box-shadow: 0px 4px 8.4px 0px rgba(0, 0, 0, 0.08);
+        z-index: $header-index;
+        transition: top .3s;
+    
+        &.fixed {
+            top: 0;
+        }
     }
         
      
