@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: "Forum";
   src: url("../fonts/Forum-Regular.ttf") format("truetype");
@@ -58,6 +60,14 @@
   font-family: "Mulish";
   src: url("../fonts/Mulish.ttf") format("truetype");
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/geometria.ttf") format("truetype");
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }

@@ -1,0 +1,163 @@
+.types{
+    background-color: $main--gray;
+    
+    @include tablet{
+        background-color: $main--white;
+    }
+    
+    .container{
+        
+        .wrap{
+            background-color: $main--gray;
+            border-radius: 4rem;
+
+            @include tablet{
+                padding: 3.2rem;
+            }
+
+            @include laptop{
+                padding: 4.8rem;
+            }
+
+            @include desktop{
+                padding: 8rem;
+            }
+
+            .items{ 
+
+                @include tablet{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1.6rem 1.2rem;
+                }
+
+                @include laptop{
+                    gap: 1.6rem;
+                }
+
+                @include desktop{
+                    gap: 2.4rem;
+                }
+                
+                .item{ 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 15.9rem;
+                    width: 17.5rem;
+                    margin-right: 0.8rem;
+                    
+                    &:last-child{
+                        margin-right: 0;  
+                    }
+
+                    @include tablet{ 
+                        width: 13rem;
+                        margin-right: 0;
+                    }
+
+                    @include laptop{ 
+                        width: 19.4rem;  
+
+                        .picture{
+                            img:first-child{
+                                opacity: 0;
+                            }
+                        }
+                        &:hover{
+                            .picture{
+                                img:first-child{
+                                    opacity: 1;
+                                }
+                            }
+                        } 
+                    }
+
+                    @include desktop{
+                        width: 27.7rem;
+                        height: 22.6rem;
+                    }
+                    
+                    .picture{ 
+                        position: relative;
+                        height: 13.2rem;
+                        background-color: $main--white;
+                        border: solid #1d1d1b2f 1px;
+                        border-radius: 2.2rem;
+                        overflow: hidden;
+                        
+                        @include desktop{
+                            height: 19.2rem;
+                        }
+                        
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            transition: 0.3s;
+                            
+                            &:last-child{
+                                display: none;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                opacity: 0;
+                            }
+
+                            @include laptop{
+
+                                 &:last-child{
+                                    display: block;
+                                    opacity: 1;
+
+                                    &:hover{
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .text{
+                        text-align: center; 
+                    }
+                    
+                    &.order{  
+                        padding: 1.2rem 2.2rem 1.2rem 1.2rem;
+                        border-radius: 2.2rem;
+                        background-color: $main--black;
+                        
+                        .text{
+                            color: $main--white;
+                            text-align: left;
+                            font-size: 1.4rem;
+                            font-family: 'Geometria';
+                            font-weight: 200;
+                            line-height: 120%;
+                        }
+
+                        @include laptop{
+                            padding: 2.2rem;
+                            
+                            .text{
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        @include desktop{
+
+                            .text{
+                                padding-right: 10rem;
+                               font-size: 2rem; 
+                            } 
+                            .btn{
+                                height: 4.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
