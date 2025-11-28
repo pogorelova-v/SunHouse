@@ -5,7 +5,7 @@
         background-color: $main--white;
     }
     
-    .container{
+    .container{  
         
         .wrap{
             background-color: $main--gray;
@@ -24,11 +24,13 @@
             }
 
             .items{ 
+                margin: 0 -2rem;
 
                 @include tablet{
                     display: flex;
                     flex-wrap: wrap;
                     gap: 1.6rem 1.2rem;
+                    margin: 0;
                 }
 
                 @include laptop{
@@ -46,6 +48,15 @@
                     height: 15.9rem;
                     width: 17.5rem;
                     margin-right: 0.8rem;
+
+                    &:first-child{
+                        margin-left: 0;
+                        padding-left: 2rem;
+
+                        @include tablet{
+                            padding-left: 0;
+                        }
+                    }
                     
                     &:last-child{
                         margin-right: 0;  
