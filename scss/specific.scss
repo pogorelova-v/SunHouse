@@ -1,0 +1,222 @@
+.specific{
+
+    .container{
+
+        .grid{
+            display: grid;
+            gap: 1.6rem;
+            grid-template-areas: 
+                'card-1 '
+                'card-2 '
+                'card-3 '
+                'card-4 '
+                'card-5 '
+            ;
+
+            @include tablet{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 20rem);
+                grid-template-areas: 
+                    'card-1 card-1'
+                    'card-2 card-2'
+                    'card-3 card-4'
+                    'card-5 card-5'
+                ;
+            }
+
+            @include laptop{
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(2, 20rem);
+                grid-template-areas: 
+                    'card-1 card-1 card-1 card-2 card-2 card-2'
+                    'card-3 card-3 card-4 card-4 card-5 card-5' 
+                ;
+            }
+
+            @include desktop{ 
+                grid-template-rows: repeat(2, 29.4rem); 
+            }
+
+            .card{
+                position: relative;
+                overflow: hidden;
+                border: solid 1px #1d1d1b42;
+                border-radius: 1.4rem;
+                padding: 1.6rem; 
+
+                @include tablet{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between; 
+                    padding: 2rem;
+                }
+
+                ul{
+                    li{
+
+                        &:not(:last-child){
+                            margin-bottom: 0.6rem;
+                        }
+                    }
+                }
+
+                img{
+                    position: absolute;
+                    object-fit: contain;
+                }
+
+                &:nth-child(1){
+                    grid-area: card-1;
+                    
+                    ul{ 
+                        max-width: 18rem;
+
+                        @include tablet{
+                            max-width: 100%;
+                        }
+                    }
+
+                    img{
+                        width: 19.9rem;
+                        height: 20rem;
+                        top: -2rem;
+                        right: -7rem;
+
+                        @include tablet{
+                            top: 0;
+                            right: 0;
+                        }
+
+                        @include laptop{ 
+                            right: -5rem;
+                        }
+
+                        @include desktop{ 
+                            width: 29.2rem;
+                            height: 29.4rem;
+                        }
+                    }
+                }
+
+                &:nth-child(2){ 
+                    grid-area: card-2;
+
+                    img{
+                        width: 12.7rem;
+                        height: 10.4rem;
+                        top: 0;
+                        right: -2rem; 
+
+                        @include tablet{
+                            width: 27rem;
+                            height: 22rem;
+                            top: -3rem;
+                            right: 0;
+                        }
+
+                        @include laptop{  
+                            right: -8rem;
+                        }
+
+                        @include desktop{  
+                            width: 35.8rem;
+                            height: 35.3rem;
+                            top: -5rem;
+
+                        }
+                    }
+                }
+
+                &:nth-child(3){ 
+                    grid-area: card-3;
+
+                    @include tablet{
+                        ul{
+                            max-width: 17.3rem;
+                        }
+                    }
+
+                    img{
+                        display: none;
+
+                        @include tablet{
+                            display: block;
+                            width: 14rem;
+                            height: 14rem;
+                            bottom: -1rem;
+                            right: -1rem;
+                        }
+
+                        @include laptop{ 
+                            right: -3rem;
+                        }
+
+                        @include desktop{ 
+                            width: 20.6rem;
+                            height: 20.6rem;
+                            right: -2rem;
+                        }
+                    }
+                }
+
+                &:nth-child(4){ 
+                    grid-area: card-4;
+
+                    @include tablet{
+                        h3{
+                            max-width: 11.2rem;
+                        }
+                    }
+
+                    img{
+                        width: 10.7rem;
+                        height: 10.7rem;
+                        top: 0.5rem;
+                        right: -3rem; 
+
+                        @include tablet{
+                            right: -1rem;
+                        }
+
+                        @include desktop{
+                            width: 23.6rem;
+                            height: 23.6rem;
+                            right: -4rem
+                        }
+                    }
+                }
+
+                &:nth-child(5){ 
+                    grid-area: card-5;
+
+                    img{
+                        display: none;
+
+                        @include tablet{
+                            display: block;
+                            width: 17.4rem;
+                            height: 24.7rem;
+                            top: -4rem;
+                            right: 0;
+                        }
+
+                        @include laptop{ 
+                            width: 12.7rem;
+                            height: 18.4rem;
+                            top: -6rem;
+                            right: -3rem;
+                        }
+
+                        @include desktop{
+                            display: block;
+                            width:18.7rem;
+                            height: 26.6rem;
+                            top: -8rem;
+                            right: -5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
